@@ -1,0 +1,36 @@
+@charset "utf-8";
+@font-face{font-family:poppin;src:url(poppin.eot);src:url(poppin.eot?#iefix) format("embedded-opentype"),url(poppin.ttf) format("truetype")};
+*{margin:0;padding:0;}
+body{padding:10px;background:#5cbdaa;color:#fff;font-family:poppin,'PingFang SC',Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif; letter-spacing:2px;font-size:12px;box-sizing: border-box;}
+h1{font-size:15px; font-weight:normal;text-align:center;}
+.clearfix{clear:both;}
+
+.img_box{width:500px; height:350px; border:1px solid #84decc; float:left; margin:40px;padding:20px; position:relative}
+.uploadImg {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+	color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border-radius: 3px;
+	background-color: #1ab394;
+	border:1px solid #84decc;
+	text-decoration:none;
+}
+.btn-blue{ background:#5890ff;}
+#myCanvas{ background:#fff;margin:10px 0;}
+.upload{ position:absolute;top:0;left:0;font-size:22px; opacity:0;}
+

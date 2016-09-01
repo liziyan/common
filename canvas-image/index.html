@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>canvas实现图片压缩</title>
+<link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body>
+<div class="img_box">
+<h1>先预览图片再上传</h1>
+<p style="position:relative;">
+	<a href="javascropt:;" class="uploadImg">Select Image</a>
+	<input type="file" id="upload" class="upload" />
+</p>
+<canvas id="myCanvas" width="400" height="200"></canvas>
+<p><a href="javascropt:;" id="submit" class="uploadImg btn-blue">上传图片</a></p>
+</div>
+
+<div class="img_box">
+<h1>直接上传图片</h1>
+<p style="position:relative;">
+	<a href="javascropt:;" class="uploadImg">Select Image</a>
+	<input type="file" id="upload1" class="upload" />
+</p>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/canvasImg.min.js"></script>
+<script>
+var afterString="请选择图片";
+$("#upload").uploadImgs({
+	viewId:'myCanvas',
+	allowLack:true,
+	afterUpload:function(string,obj){afterString=string;}
+});
+$("#submit").click(function(){
+	alert(afterString);	
+});
+$("#upload1").uploadImgs({
+	width:50,
+	height:29.5,	
+	afterUpload:function(string,obj){
+		alert(string)
+	}
+})
+</script>
+</body>
+</html>

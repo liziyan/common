@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>注册</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/gloab.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/register.js"></script>
+</head>
+<body class="bgf4">
+<div class="login-box f-mt10 f-pb50">
+	<div class="main bgf">    
+    	<div class="reg-box-pan display-inline">  
+        	<div class="step">        	
+                <ul>
+                    <li class="col-xs-4 on">
+                        <span class="num"><em class="f-r5"></em><i>1</i></span>                	
+                        <span class="line_bg lbg-r"></span>
+                        <p class="lbg-txt">填写账户信息</p>
+                    </li>
+                    <li class="col-xs-4">
+                        <span class="num"><em class="f-r5"></em><i>2</i></span>
+                        <span class="line_bg lbg-l"></span>
+                        <span class="line_bg lbg-r"></span>
+                        <p class="lbg-txt">验证账户信息</p>
+                    </li>
+                    <li class="col-xs-4">
+                        <span class="num"><em class="f-r5"></em><i>3</i></span>
+                        <span class="line_bg lbg-l"></span>
+                        <p class="lbg-txt">注册成功</p>
+                    </li>
+                </ul>
+            </div>
+        	<div class="reg-box" id="verifyCheck" style="margin-top:20px;">
+            	<div class="part1">                	
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>用户名：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" maxlength="20" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:3-20||isUname" data-error="用户名不能为空||用户名长度3-20位||只能输入中文、字母、数字、下划线，且以中文或字母开头" id="adminNo" />                            <span class="ie8 icon-close close hide"></span>
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus"><span>3-20位，中文、字母、数字、下划线的组合，以中文或字母开头</span></label>
+                            <label class="focus valid"></label>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>手机号：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" class="txt03 f-r3 required" keycodes="tel" tabindex="2" data-valid="isNonEmpty||isPhone" data-error="手机号码不能为空||手机号码格式不正确" maxlength="11" id="phone" /> 
+                            <span class="ie8 icon-close close hide"></span>                           
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus">请填写11位有效的手机号码</label>
+                            <label class="focus valid"></label>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>密码：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="password" id="password" maxlength="20" class="txt03 f-r3 required" tabindex="3" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-20||level:2" data-error="密码不能为空||密码长度6-20位||该密码太简单，有被盗风险，建议字母+数字的组合" /> 
+                            <span class="ie8 icon-close close hide" style="right:55px"></span>
+                            <span class="showpwd" data-eye="password"></span>                        
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus">6-20位英文（区分大小写）、数字、字符的组合</label>
+                            <label class="focus valid"></label>
+                            <span class="clearfix"></span>
+                            <label class="strength">
+                            	<span class="f-fl f-size12">安全程度：</span>
+                            	<b><i>弱</i><i>中</i><i>强</i></b>
+                            </label>    
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>确认密码：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="password" maxlength="20" class="txt03 f-r3 required" tabindex="4" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-16||isRepeat:password" data-error="密码不能为空||密码长度6-16位||两次密码输入不一致" id="rePassword" />
+                            <span class="ie8 icon-close close hide" style="right:55px"></span>
+                            <span class="showpwd" data-eye="rePassword"></span>
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus">请再输入一遍上面的密码</label> 
+                            <label class="focus valid"></label>                          
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>验证码：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" maxlength="4" class="txt03 f-r3 f-fl required" tabindex="4" style="width:167px" id="randCode" data-valid="isNonEmpty" data-error="验证码不能为空" /> 
+                            <span class="ie8 icon-close close hide"></span>
+                            <label class="f-size12 c-999 f-fl f-pl10">
+                            	<img src="images/yzm.jpg" />                               
+                            </label>                        
+                            <label class="icon-sucessfill blank hide" style="left:380px"></label>
+                            <label class="focusa">看不清？<a href="javascript:;" class="c-blue">换一张</a></label>   
+                            <label class="focus valid" style="left:370px"></label>                        
+                        </div>
+                    </div>
+                    <div class="item col-xs-12" style="height:auto">
+                        <span class="intelligent-label f-fl">&nbsp;</span>  
+                        <p class="f-size14 required"  data-valid="isChecked" data-error="请先同意条款"> 
+                        	<input type="checkbox" checked /><a href="javascript:showoutc();" class="f-ml5">我已阅读并同意条款</a>
+                        </p>                       
+                        <label class="focus valid"></label> 
+                    </div> 
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl">&nbsp;</span>    
+                        <div class="f-fl item-ifo">
+                           <a href="javascript:;" class="btn btn-blue f-r3" id="btn_part1">下一步</a>                         
+                        </div>
+                    </div> 
+                </div>
+                <div class="part2" style="display:none">
+                	<div class="alert alert-info" style="width:700px">短信已发送至您手机，请输入短信中的验证码，确保您的手机号真实有效。</div>                    
+                    <div class="item col-xs-12 f-mb10" style="height:auto">
+                        <span class="intelligent-label f-fl">手机号：</span>    
+                        <div class="f-fl item-ifo c-blue">
+                            15824450934
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>验证码：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" maxlength="6" id="verifyNo" class="txt03 f-r3 f-fl required" tabindex="4" style="width:167px" data-valid="isNonEmpty||isInt" data-error="验证码不能为空||请输入6位数字验证码" /> 
+                           	<span class="btn btn-gray f-r3 f-ml5 f-size13" id="time_box" disabled style="width:97px;display:none;">发送验证码</span>
+                            <span class="btn btn-gray f-r3 f-ml5 f-size13" id="verifyYz" style="width:97px;">发送验证码</span>
+                            <span class="ie8 icon-close close hide" style="right:130px"></span>
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus"><span>请查收手机短信，并填写短信中的验证码（此验证码3分钟内有效）</span></label>   
+                            <label class="focus valid"></label>                        
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl">&nbsp;</span>    
+                        <div class="f-fl item-ifo">
+                           <a href="javascript:;" class="btn btn-blue f-r3" id="btn_part2">注册</a>                         
+                        </div>
+                    </div> 
+                </div>
+                <div class="part3" style="display:none">
+                	<div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>真实姓名：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" maxlength="10" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:2-10||isZh" data-error="真实姓名不能为空||真实姓名长度2-10位||只能输入中文" id="adminNo" />   
+                            <span class="ie8 icon-close close hide"></span>                         
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus">2-10位，中文真实姓名</label>
+                            <label class="focus valid"></label>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl"><b class="ftx04">*</b>身份证号：</span>    
+                        <div class="f-fl item-ifo">
+                            <input type="text" class="txt03 f-r3 required" tabindex="2" data-valid="isNonEmpty||isCard" data-error="身份证号不能为空||身份证号码格式不正确" maxlength="18" id="phone" />    
+                            <span class="ie8 icon-close close hide"></span>                        
+                            <label class="icon-sucessfill blank hide"></label>
+                            <label class="focus">请填写18位有效的手机号码</label>
+                            <label class="focus valid"></label>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12">
+                        <span class="intelligent-label f-fl">&nbsp;</span>    
+                        <div class="f-fl item-ifo">
+                           <a href="javascript:;" class="btn btn-blue f-r3" id="btn_part3">下一步</a>                         
+                        </div>
+                    </div>
+                </div>  
+                <div class="part4 text-center" style="display:none">
+                	<h3>恭喜cz82465，您已注册成功，现在开始您的投资之旅吧！</h3>
+                    <p class="c-666 f-mt30 f-mb50">页面将在 <strong id="times" class="f-size18">10</strong> 秒钟后，跳转到 <a href="my.html" class="c-blue">用户中心</a></p>
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-sPopBg" style="z-index:998;"></div>
+<div class="m-sPopCon regcon">
+	<div class="m-sPopTitle"><strong>恒生云融-融生意云平台服务协议条款</strong><b id="sPopClose" class="m-sPopClose" onClick="closeClause()">×</b></div>
+    <div class="apply_up_content">
+    	<pre class="f-r0">
+		<strong>同意以下服务条款，提交注册信息</strong>
+欢迎阅读融生意云平台产品服务条款协议(下称“本协议”)。本协议是您（个人
+或单一实体）与杭州恒生云融网络有限公司（以下简称“恒生云融”）之间有关
+融生意云平台产品（以下简称“融生意”）的法律协议。本软件产品包括计算机
+软件，并可能包括但不限于相关媒体、印刷材料、电子文档、恒生云融提供给您
+的原“软件产品”的任何更新和补充资料。您一旦安装、复制、下载、访问或以
+其它方式使用融生意，即表示您同意接受本《协议》各项条款的约束，并且对本
+协议及产品说明书、声明等全部系列文件已明确知悉并接受。如您不同意本《协
+议》中的条款，请不要安装或使用融生意。 
+<strong>1、用户授权： </strong>
+恒生云融，将本“软件产品”的使用权依据本协议的约定授予您。本“软件产品”
+的一切知识产权，以及与软件相关的所有信息内容，包括但不限于文字表达及其
+组合、图标、图饰、图像、图表、色彩、界面设计、版面框架、有关数据、附件
+程序、印刷材料或者电子文档等均为恒生云融所有，受著作权法及其它知识产权
+法和相关国际条约的保护。本“软件产品”只能在《协议》许可的范围、方式予
+以使用，而不能另行出售、复制、修改、转让等。本协议有效期间，您仅享有依
+据本协议约定的使用权，本软件产品的其他任何权益，均归恒生云融所有。
+<strong>2、使用约定： </strong>
+①在正式使用融生意前，您可以通过邮件、手机等方式进行验证注册，验证后，
+您将享有融生意的永久免费使用权（除增值服务产品外）。
+②在您使用本软件产品的连续3个月中未尝试登录，我们可能会冻结您的数据。
+您可以联系我们的工作人员解冻您的数据。
+③一旦您注销本软件产品账号并停止使用，恒生云融没有义务为您保留原账号
+中或与之相关的任何信息。
+④用户可以根据自身的需要，在线订购我们的增值服务产品，融生意会对收费
+产品进行明显的标注,以及提供支付的入口页面
+<strong>3、您保证不： </strong>
+①将软件或其使用权利，有偿或无偿向其他单位或个人销售、转租、转借、转让
+②向其他单位或个人提供软件或资料的复制品。
+③对软件作改变、反编译、反汇编等反向工程处理。
+④试图进行任何获得本“软件”源代码的访问或行为。
+⑤除掉或掩盖有关软件著作权或商标的标志。
+⑥其他超越或违反本协议规定行使软件权利的行为。
+您违反上述保证之时，您的使用权即自行终止。 
+<strong>4、风险提示： </strong>
+恒生云融特别提示您：请注意本软件产品使用过程中的风险控制，使用本软件产
+品由您自己承担风险，此软件不包含任何使用保证，不能保证适用或不出故障。
+在适用法律允许的最大范围内，恒生云融在任何情况下不就因使用或不能使用本
+软件产品所发生的特殊的、意外的、直接或间接的损失承担赔偿责任。对您因软
+件遗失、被盗、毁损、误用、或擅自修改造成的损失恒生云融不承担任何责任。
+<strong>5、责任有限： </strong>
+恒生云融不就因使用或不能使用本“软件”所引起的或有关的任何间接的、意外
+的、直接的、特殊的、惩罚性的或其它任何损害（包括但不限于因人身伤害或财
+产损坏而造成的损害，因利润损失、数据损失、营业中断、计算机瘫痪或故障、
+商业信息的遗失而造成的损害，因未能履行包括诚信或相当注意在内的任何责任
+致使隐私泄露而造成的损害，因疏忽而造成的损害，或因任何金钱上的损失或任
+何其它损失而造成的损害）承担赔偿责任，即使恒生云融事先被告知该损害发生
+的可能性。 
+<strong>6、注册义务</strong>
+您在融生意进行注册，注册时需要通过邮件、手机或第三方应用授权等方式进行
+验证，您保证，所提供的资料是真实、准确、和完整的，倘若您提供任何不真实
+、不准确、不完整或不能反映当前情况的资料，恒生云融有权暂停或终止您的
+注册身份及资料，并拒绝您在目前或将来对“服务”(或其任何部份)以任何形式
+使用。
+恒生云融对您所提交的资料的安全性不承担任何责任或义务。 
+<strong>7、账户、密码和保密</strong>
+在注册过程中，您将选择账户名和密码。您须自行负责对您的账户名和密码保密
+，且须对您在账户名和密码下发生的所有活动承担责任。恒生云融不对您所保管
+的账户、密码被其他任何第三人使用及其产生的后果承担任何责任、义务。
+您同意： ①如发现任何人未经授权使用您的账户名或密码，或发生违反保密规
+定的任何其他情况，您会立即通知恒生云融。
+②确保您在每个使用时段结束时，以正确步骤离开操作平台。恒生云融不能也不
+会对因您未能遵守本款规定而发生的任何损失或损毁负责。
+<strong>8、终止或访问限制</strong>
+①您同意，在使用融生意时，应自行妥善保管您所提交的资料及在享受服务过程
+中所形成的相关资料、信息等。在融生意未向您收费的情况下，可随时停止提供
+“服务”，并删除和丢弃您在使用“服务”中提交的“您的资料”，并且无须通
+知。对由此所可能产生的责任与损失，恒生云融无须承担任何责任。
+②您若违反本协议的任一条款与条件，恒生云融可随时终止服务。终止服务之时
+，您必须立即终止使用融生意。 
+③恒生云融有权随时修改本协议，而无需征得您事先同意，修改后的条款于公示
+之时生效。恒生云融修改协议条款后，如果您不接受修改后的条款，请您立即停
+止使用融生意，您继续使用将被视为您已接受修改后的条款。
+若您对本协议内容有任何疑问，可通过邮件与我们联系：
+gucong@hundsun.com。
+本协议最终解释权归杭州恒生云融网络科技有限公司所有。</pre>
+    </div>
+    <center><a class="btn btn-blue btn-lg f-size12 b-b0 b-l0 b-t0 b-r0 f-pl50 f-pr50 f-r3" href="javascript:closeClause();">已阅读并同意此条款</a></center>
+</div>
+<script>
+$(function(){	
+	//第一页的确定按钮
+	$("#btn_part1").click(function(){						
+		if(!verifyCheck._click()) return;
+		$(".part1").hide();
+		$(".part2").show();
+		$(".step li").eq(1).addClass("on");
+	});
+	//第二页的确定按钮
+	$("#btn_part2").click(function(){			
+		if(!verifyCheck._click()) return;
+		$(".part2").hide();
+		$(".part3").show();	
+	});	
+	//第三页的确定按钮
+	$("#btn_part3").click(function(){			
+		if(!verifyCheck._click()) return;
+		$(".part3").hide();
+		$(".part4").show();
+		$(".step li").eq(2).addClass("on");
+		countdown({
+			maxTime:10,
+			ing:function(c){
+				$("#times").text(c);
+			},
+			after:function(){
+				window.location.href="my.html";		
+			}
+		});		
+	});	
+});
+function showoutc(){$(".m-sPopBg,.m-sPopCon").show();}
+function closeClause(){
+	$(".m-sPopBg,.m-sPopCon").hide();		
+}
+</script>
+</body>
+</html>
