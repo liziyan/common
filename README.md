@@ -13,4 +13,21 @@ divScroll是div的滚动条，观看地址：<a href="http://suacool.cn/other/di
 "_blank">http://suacool.cn/other/divScroll/demo.html</a><br>
 fuzzy是仿百度的模糊查询，观看地址：<a href="http://suacool.cn/other/fuzzy/" target=
 "_blank">http://suacool.cn/other/fuzzy/</a><br>
-
+<br>
+<br>
+以下三个是以前用JS写的三个小游戏<br>
+数独方块：<a href="http://suacool.cn/h5game/sd/" target=
+"_blank">http://suacool.cn/h5game/sd/</a><br>
+<img src="http://suacool.cn/h5game/sd/sdewm.png" /><br>
+手机扫码可玩<br>
+<br>
+五子棋：<a href="http://suacool.cn/h5game/wzq/" target=
+"_blank">http://suacool.cn/h5game/wzq/</a><br>
+<img src="http://suacool.cn/h5game/wzq/wzqewm.png" /><br>
+手机扫码可玩<br>
+<br>
+象棋：<a href="http://suacool.cn/h5game/xq/" target=
+"_blank">http://suacool.cn/h5game/xq/</a><br>
+<img src="http://suacool.cn/h5game/xq/xqewm.png" /><br>
+手机扫码可玩<br>
+<br>
