@@ -1,0 +1,26 @@
+CACHE MANIFEST
+#v0.1
+#2015.7.1
+
+CACHE:
+js/jquery-2.1.0.min.js
+js/utils.js
+js/state.js
+js/game.js
+js/grid.js
+js/tile.js
+js/hint.js
+js/tutorial.js
+js/levels.js
+js/backgroundservice.js
+css/style.css
+img/arrow-right.png
+img/close.png
+img/eye.png
+img/question.png
+img/spinner.png
+img/trophy.png
+img/icon-1024.png
+
+
+NETWORK:

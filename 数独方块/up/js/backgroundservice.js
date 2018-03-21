@@ -1,0 +1,1 @@
+var BackgroundService=new(function(){function generateGridAndSolution(size){var d=new Date();var grid=new Grid(size)}function kick(){var a=Levels.needs();if(a){generateGridAndSolution(a)}}this.kick=kick;this.__defineGetter__('enabled',function(){return enabled})})();
