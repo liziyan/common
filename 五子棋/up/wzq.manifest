@@ -1,0 +1,27 @@
+CACHE MANIFEST
+#v0.1
+#2015.8.18
+
+CACHE:
+js/jquery-1.8.3.min.js
+js/page.js
+js/AI.js
+css/base.css
+css/li.png
+css/bg.jpg
+css/black.png
+css/black_last.png
+css/hover.png
+css/imgbg.jpg
+css/li_bl.png
+css/li_tl.png
+css/li_tr.png
+css/li_br.png
+css/li_left.png
+css/li_right.png
+css/li_top.png
+css/li_bottom.png
+css/li_dot.png
+css/white.png
+css/white_last.png
+NETWORK:

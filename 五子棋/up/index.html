@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  manifest="wzq.manifest">
+<head>
+<meta charset="utf-8" />
+<title>单机五子棋</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/page.js"></script>
+<script src="js/AI.js"></script>
+</head>
+<body>
+<div class="pane"></div>
+<div class="hover"></div>
+<div class="star" id="star">
+<a href="javascript:;" class="tyroPlay"><em></em><span class="btn">人机大战</span></a>
+<a href="javascript:;" class="personPlay"><em></em><span class="btn">双人对弈</span></a>
+<a href="javascript:;" class="back" style="display:none"><em></em><span class="btn">返回游戏</span></a>
+</div>
+<div class="con con1" style="display:none">
+<input type="button" name="offensivePlay" class="news current" value="新手水平" />
+<input type="button" name="offensivePlay" class="superPlay" value="大师水平" />
+<input type="button" name="regret" class="regretBn" value="悔棋" />
+<input type="button" name="regret" class="reChange" value="重选模式" />
+</div>
+<div class="con con2" style="display:none">
+<input type="button" name="regret" class="regretBn" value="悔棋" />
+<input type="button" name="regret" class="reChange" value="重选模式" />
+</div>
+<script>
+var gobang=gobang||{};
+$(function(){	
+	gobang.page.init();	//加载棋盘
+})
+</script>
+</body>
+</html>
